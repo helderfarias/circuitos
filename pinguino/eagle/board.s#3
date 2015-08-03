@@ -11227,7 +11227,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <variantdefs>
 </variantdefs>
 <classes>
-<class number="0" name="default" width="0.6096" drill="0.09">
+<class number="0" name="default" width="0.6096" drill="10">
 </class>
 </classes>
 <parts>
@@ -11375,8 +11375,19 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="48.26" y1="-7.62" x2="48.26" y2="-15.24" width="0.1524" layer="91"/>
 </segment>
 <segment>
+<pinref part="USB" gate="G$1" pin="GND"/>
+<pinref part="GND8" gate="1" pin="GND"/>
+<wire x1="175.26" y1="0" x2="170.18" y2="0" width="0.1524" layer="91"/>
+<wire x1="170.18" y1="0" x2="170.18" y2="-15.24" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<wire x1="175.26" y1="33.02" x2="167.64" y2="33.02" width="0.1524" layer="91"/>
+<label x="160.02" y="33.02" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="IC1" gate="A" pin="GND"/>
 <pinref part="GND7" gate="1" pin="GND"/>
-<wire x1="127" y1="-15.24" x2="127" y2="-5.08" width="0.1524" layer="91"/>
+<wire x1="127" y1="-5.08" x2="127" y2="-15.24" width="0.1524" layer="91"/>
 <pinref part="C4" gate="G$1" pin="-"/>
 <wire x1="142.24" y1="-7.62" x2="142.24" y2="-15.24" width="0.1524" layer="91"/>
 <wire x1="142.24" y1="-15.24" x2="127" y2="-15.24" width="0.1524" layer="91"/>
@@ -11388,19 +11399,9 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="101.6" y1="-2.54" x2="101.6" y2="-15.24" width="0.1524" layer="91"/>
 <wire x1="101.6" y1="-15.24" x2="111.76" y2="-15.24" width="0.1524" layer="91"/>
 <pinref part="C5" gate="G$1" pin="2"/>
-<wire x1="111.76" y1="-15.24" x2="127" y2="-15.24" width="0.1524" layer="91"/>
 <wire x1="111.76" y1="-7.62" x2="111.76" y2="-15.24" width="0.1524" layer="91"/>
+<wire x1="111.76" y1="-15.24" x2="127" y2="-15.24" width="0.1524" layer="91"/>
 <junction x="111.76" y="-15.24"/>
-<pinref part="IC1" gate="A" pin="GND"/>
-</segment>
-<segment>
-<pinref part="USB" gate="G$1" pin="GND"/>
-<pinref part="GND8" gate="1" pin="GND"/>
-<wire x1="175.26" y1="0" x2="170.18" y2="0" width="0.1524" layer="91"/>
-<wire x1="170.18" y1="0" x2="170.18" y2="-15.24" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<wire x1="175.26" y1="33.02" x2="167.64" y2="33.02" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="VCC" class="0">
@@ -11433,6 +11434,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <segment>
 <pinref part="JP6" gate="G$1" pin="1"/>
 <wire x1="172.72" y1="35.56" x2="167.64" y2="35.56" width="0.1524" layer="91"/>
+<label x="160.02" y="35.56" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$3" class="0">
@@ -11446,6 +11448,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <segment>
 <pinref part="U1" gate="G$1" pin="RCV/T0CKI/C1OUT/RA4"/>
 <wire x1="33.02" y1="63.5" x2="38.1" y2="63.5" width="0.1524" layer="91"/>
+<label x="38.1" y="63.5" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="RUN" gate="G$1" pin="C"/>
@@ -11537,180 +11540,216 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <segment>
 <pinref part="U1" gate="G$1" pin="AN0/RA0"/>
 <wire x1="33.02" y1="73.66" x2="38.1" y2="73.66" width="0.1524" layer="91"/>
+<label x="38.1" y="73.66" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="JP3" gate="G$1" pin="1"/>
 <wire x1="142.24" y1="73.66" x2="137.16" y2="73.66" width="0.1524" layer="91"/>
+<label x="132.08" y="73.66" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="PIN3" class="0">
 <segment>
 <pinref part="U1" gate="G$1" pin="AN1/RA1"/>
 <wire x1="33.02" y1="71.12" x2="38.1" y2="71.12" width="0.1524" layer="91"/>
+<label x="38.1" y="71.12" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="JP3" gate="G$1" pin="2"/>
 <wire x1="142.24" y1="71.12" x2="137.16" y2="71.12" width="0.1524" layer="91"/>
+<label x="132.08" y="71.12" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="PIN4" class="0">
 <segment>
 <pinref part="U1" gate="G$1" pin="VREF-/CVREF/AN2/RA2"/>
 <wire x1="33.02" y1="68.58" x2="38.1" y2="68.58" width="0.1524" layer="91"/>
+<label x="38.1" y="68.58" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="JP3" gate="G$1" pin="3"/>
 <wire x1="142.24" y1="68.58" x2="137.16" y2="68.58" width="0.1524" layer="91"/>
+<label x="132.08" y="68.58" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="PIN5" class="0">
 <segment>
 <pinref part="U1" gate="G$1" pin="VREF+/AN3/RA3"/>
 <wire x1="33.02" y1="66.04" x2="38.1" y2="66.04" width="0.1524" layer="91"/>
+<label x="38.1" y="66.04" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="JP3" gate="G$1" pin="4"/>
 <wire x1="142.24" y1="66.04" x2="137.16" y2="66.04" width="0.1524" layer="91"/>
+<label x="132.08" y="66.04" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="PIN7" class="0">
 <segment>
 <pinref part="U1" gate="G$1" pin="_SS/HLVDIN/C2OUT/AN4/RA5"/>
 <wire x1="33.02" y1="60.96" x2="38.1" y2="60.96" width="0.1524" layer="91"/>
+<label x="38.1" y="60.96" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="JP3" gate="G$1" pin="6"/>
 <wire x1="142.24" y1="60.96" x2="137.16" y2="60.96" width="0.1524" layer="91"/>
+<label x="132.08" y="60.96" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="PIN21" class="0">
 <segment>
 <pinref part="U1" gate="G$1" pin="INT0/FLT0/SDI/SDA/AN12/RB0"/>
 <wire x1="33.02" y1="50.8" x2="38.1" y2="50.8" width="0.1524" layer="91"/>
+<label x="38.1" y="50.8" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="JP4" gate="G$1" pin="1"/>
 <wire x1="172.72" y1="73.66" x2="167.64" y2="73.66" width="0.1524" layer="91"/>
+<label x="160.02" y="73.66" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="PIN22" class="0">
 <segment>
 <pinref part="U1" gate="G$1" pin="INT1/SCK/SCL/AN10/RB1"/>
 <wire x1="33.02" y1="48.26" x2="38.1" y2="48.26" width="0.1524" layer="91"/>
+<label x="38.1" y="48.26" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="JP4" gate="G$1" pin="2"/>
 <wire x1="172.72" y1="71.12" x2="167.64" y2="71.12" width="0.1524" layer="91"/>
+<label x="160.02" y="71.12" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="PIN23" class="0">
 <segment>
 <pinref part="U1" gate="G$1" pin="INT2/VMO/AN8/RB2"/>
 <wire x1="33.02" y1="45.72" x2="38.1" y2="45.72" width="0.1524" layer="91"/>
+<label x="38.1" y="45.72" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="JP4" gate="G$1" pin="3"/>
 <wire x1="172.72" y1="68.58" x2="167.64" y2="68.58" width="0.1524" layer="91"/>
+<label x="160.02" y="68.58" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="PIN24" class="0">
 <segment>
 <pinref part="U1" gate="G$1" pin="CCP2/VPO/AN9/RB3"/>
 <wire x1="33.02" y1="43.18" x2="38.1" y2="43.18" width="0.1524" layer="91"/>
+<label x="38.1" y="43.18" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="JP4" gate="G$1" pin="4"/>
 <wire x1="172.72" y1="66.04" x2="167.64" y2="66.04" width="0.1524" layer="91"/>
+<label x="160.02" y="66.04" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="PIN25" class="0">
 <segment>
 <pinref part="U1" gate="G$1" pin="KBI0/AN11/RB4"/>
 <wire x1="33.02" y1="40.64" x2="38.1" y2="40.64" width="0.1524" layer="91"/>
+<label x="38.1" y="40.64" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="JP4" gate="G$1" pin="5"/>
 <wire x1="172.72" y1="63.5" x2="167.64" y2="63.5" width="0.1524" layer="91"/>
+<label x="160.02" y="63.5" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="PIN26" class="0">
 <segment>
 <pinref part="U1" gate="G$1" pin="KBI1/PGM/RB5"/>
 <wire x1="33.02" y1="38.1" x2="38.1" y2="38.1" width="0.1524" layer="91"/>
+<label x="38.1" y="38.1" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="JP4" gate="G$1" pin="6"/>
 <wire x1="172.72" y1="60.96" x2="167.64" y2="60.96" width="0.1524" layer="91"/>
+<label x="160.02" y="60.96" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="PIN27" class="0">
 <segment>
 <pinref part="U1" gate="G$1" pin="KBI2/PGC/RB6"/>
 <wire x1="33.02" y1="35.56" x2="38.1" y2="35.56" width="0.1524" layer="91"/>
+<label x="38.1" y="35.56" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="JP4" gate="G$1" pin="7"/>
 <wire x1="172.72" y1="58.42" x2="167.64" y2="58.42" width="0.1524" layer="91"/>
+<label x="160.02" y="58.42" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="PIN28" class="0">
 <segment>
 <pinref part="U1" gate="G$1" pin="KBI3/PGD/RB7"/>
 <wire x1="33.02" y1="33.02" x2="38.1" y2="33.02" width="0.1524" layer="91"/>
+<label x="38.1" y="33.02" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="JP4" gate="G$1" pin="8"/>
 <wire x1="172.72" y1="55.88" x2="167.64" y2="55.88" width="0.1524" layer="91"/>
+<label x="160.02" y="55.88" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="PIN11" class="0">
 <segment>
 <pinref part="U1" gate="G$1" pin="T1OSO/T13CKI/RC0"/>
 <wire x1="33.02" y1="27.94" x2="38.1" y2="27.94" width="0.1524" layer="91"/>
+<label x="38.1" y="27.94" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="JP5" gate="G$1" pin="1"/>
 <wire x1="142.24" y1="35.56" x2="137.16" y2="35.56" width="0.1524" layer="91"/>
+<label x="129.54" y="35.56" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="PIN12" class="0">
 <segment>
 <pinref part="U1" gate="G$1" pin="_UOE/T1OSI/CCP2/RC1"/>
 <wire x1="33.02" y1="25.4" x2="38.1" y2="25.4" width="0.1524" layer="91"/>
+<label x="38.1" y="25.4" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="JP5" gate="G$1" pin="2"/>
 <wire x1="142.24" y1="33.02" x2="137.16" y2="33.02" width="0.1524" layer="91"/>
+<label x="129.54" y="33.02" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="PIN13" class="0">
 <segment>
 <pinref part="U1" gate="G$1" pin="CCP1/RC2"/>
 <wire x1="33.02" y1="22.86" x2="38.1" y2="22.86" width="0.1524" layer="91"/>
+<label x="38.1" y="22.86" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="JP5" gate="G$1" pin="3"/>
 <wire x1="142.24" y1="30.48" x2="137.16" y2="30.48" width="0.1524" layer="91"/>
+<label x="129.54" y="30.48" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="PIN17" class="0">
 <segment>
 <pinref part="U1" gate="G$1" pin="TX/CK/RC6"/>
 <wire x1="33.02" y1="12.7" x2="38.1" y2="12.7" width="0.1524" layer="91"/>
+<label x="38.1" y="12.7" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="JP6" gate="G$1" pin="3"/>
 <wire x1="172.72" y1="30.48" x2="167.64" y2="30.48" width="0.1524" layer="91"/>
+<label x="160.02" y="30.48" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="PIN18" class="0">
 <segment>
 <pinref part="U1" gate="G$1" pin="SDO/RX/DT/RC7"/>
 <wire x1="33.02" y1="10.16" x2="38.1" y2="10.16" width="0.1524" layer="91"/>
+<label x="38.1" y="10.16" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="JP6" gate="G$1" pin="4"/>
 <wire x1="172.72" y1="27.94" x2="167.64" y2="27.94" width="0.1524" layer="91"/>
+<label x="160.02" y="27.94" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
@@ -11720,49 +11759,24 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <approved hash="104,1,-17.78,38.1,U1,VSS,GND,,,"/>
 <approved hash="104,1,-17.78,35.56,U1,VSS,GND,,,"/>
 <approved hash="104,1,-17.78,43.18,U1,VDD,VCC,,,"/>
-<approved hash="106,1,167.64,76.2,N$9,,,,,"/>
-<approved hash="106,1,33.02,66.04,PIN5,,,,,"/>
-<approved hash="106,1,33.02,27.94,PIN11,,,,,"/>
-<approved hash="106,1,33.02,25.4,PIN12,,,,,"/>
-<approved hash="106,1,33.02,22.86,PIN13,,,,,"/>
-<approved hash="106,1,33.02,12.7,PIN17,,,,,"/>
-<approved hash="106,1,33.02,10.16,PIN18,,,,,"/>
 <approved hash="113,1,91.7617,57.15,RUN,,,,,"/>
 <approved hash="113,1,109.542,57.15,POWER,,,,,"/>
 <approved hash="113,1,68.58,7.23053,RESET,,,,,"/>
-<approved hash="113,1,170.857,76.0053,JP3,,,,,"/>
-<approved hash="113,1,170.857,50.6053,JP4,,,,,"/>
-<approved hash="113,1,-46.3973,84.0147,JP6,,,,,"/>
-<approved hash="115,1,165.1,83.82,PIN2,,,,,"/>
-<approved hash="115,1,35.56,73.66,PIN2,,,,,"/>
-<approved hash="115,1,165.1,81.28,PIN3,,,,,"/>
-<approved hash="115,1,35.56,71.12,PIN3,,,,,"/>
-<approved hash="115,1,165.1,78.74,PIN4,,,,,"/>
-<approved hash="115,1,35.56,68.58,PIN4,,,,,"/>
-<approved hash="115,1,91.44,50.8,PIN6,,,,,"/>
-<approved hash="115,1,35.56,63.5,PIN6,,,,,"/>
-<approved hash="115,1,165.1,71.12,PIN7,,,,,"/>
-<approved hash="115,1,35.56,60.96,PIN7,,,,,"/>
-<approved hash="115,1,-44.45,81.28,GND,,,,,"/>
-<approved hash="115,1,-44.45,83.82,VCC,,,,,"/>
-<approved hash="115,1,172.72,7.62,D+,,,,,"/>
-<approved hash="115,1,172.72,5.08,D-,,,,,"/>
-<approved hash="115,1,165.1,60.96,PIN21,,,,,"/>
 <approved hash="115,1,35.56,50.8,PIN21,,,,,"/>
-<approved hash="115,1,165.1,58.42,PIN22,,,,,"/>
 <approved hash="115,1,35.56,48.26,PIN22,,,,,"/>
-<approved hash="115,1,165.1,55.88,PIN23,,,,,"/>
 <approved hash="115,1,35.56,45.72,PIN23,,,,,"/>
-<approved hash="115,1,165.1,53.34,PIN24,,,,,"/>
 <approved hash="115,1,35.56,43.18,PIN24,,,,,"/>
-<approved hash="115,1,165.1,50.8,PIN25,,,,,"/>
 <approved hash="115,1,35.56,40.64,PIN25,,,,,"/>
-<approved hash="115,1,165.1,48.26,PIN26,,,,,"/>
+<approved hash="115,1,35.56,73.66,PIN2,,,,,"/>
 <approved hash="115,1,35.56,38.1,PIN26,,,,,"/>
-<approved hash="115,1,165.1,45.72,PIN27,,,,,"/>
+<approved hash="115,1,35.56,71.12,PIN3,,,,,"/>
 <approved hash="115,1,35.56,35.56,PIN27,,,,,"/>
-<approved hash="115,1,165.1,43.18,PIN28,,,,,"/>
+<approved hash="115,1,35.56,68.58,PIN4,,,,,"/>
 <approved hash="115,1,35.56,33.02,PIN28,,,,,"/>
+<approved hash="115,1,35.56,63.5,PIN6,,,,,"/>
+<approved hash="115,1,172.72,7.62,D+,,,,,"/>
+<approved hash="115,1,35.56,60.96,PIN7,,,,,"/>
+<approved hash="115,1,172.72,5.08,D-,,,,,"/>
 </errors>
 </schematic>
 </drawing>
