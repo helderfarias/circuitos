@@ -2534,8 +2534,8 @@ grid 5 mm, outline 5 x 7.5 mm</description>
 <wire x1="3.429" y1="-2.54" x2="3.683" y2="-2.286" width="0.1524" layer="21" curve="90"/>
 <wire x1="-3.683" y1="-2.286" x2="-3.429" y2="-2.54" width="0.1524" layer="21" curve="90"/>
 <wire x1="-3.683" y1="2.286" x2="-3.429" y2="2.54" width="0.1524" layer="21" curve="-90"/>
-<pad name="1" x="-2.54" y="0" drill="0.8128" shape="octagon"/>
-<pad name="2" x="2.54" y="0" drill="0.8128" shape="octagon"/>
+<pad name="1" x="-2.54" y="0" drill="0.8128" diameter="1.8796"/>
+<pad name="2" x="2.54" y="0" drill="0.8128" diameter="1.8796"/>
 <text x="-3.429" y="2.921" size="1.27" layer="25" ratio="10">&gt;NAME</text>
 <text x="-3.175" y="-2.159" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
 </package>
@@ -9701,9 +9701,7 @@ will be further integrated into the Sparkfun Library for other footprints.  It c
 <connect gate="G$1" pin="VBUS" pad="4"/>
 </connects>
 <technologies>
-<technology name="">
-<attribute name="PROD_ID" value="CONN-08193" constant="no"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 <device name="SMD" package="USB-MINIB">
@@ -11081,17 +11079,54 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </package>
 <package name="CPOL-RADIAL-10UF-25V-KIT">
 <circle x="0" y="0" radius="2.5" width="0.2032" layer="21"/>
-<pad name="1" x="1.27" y="0" drill="0.7" diameter="1.651" shape="square" stop="no"/>
-<pad name="2" x="-1.27" y="0" drill="0.7" diameter="1.651" stop="no"/>
+<pad name="1" x="1.27" y="0" drill="0.8128" diameter="1.8796" stop="no"/>
+<pad name="2" x="-1.27" y="0" drill="0.8128" diameter="1.8796" stop="no"/>
 <text x="-0.889" y="1.524" size="0.4064" layer="25">&gt;Name</text>
 <text x="-1.905" y="-3.683" size="0.8128" layer="27">&gt;Value</text>
-<circle x="-1.27" y="0" radius="0.3556" width="0" layer="29"/>
+<circle x="-1.27" y="0" radius="0.4064" width="0" layer="29"/>
 <circle x="-1.27" y="0" radius="0.9652" width="0" layer="30"/>
 <circle x="1.27" y="0" radius="0.3556" width="0" layer="29"/>
 <rectangle x1="0.3048" y1="-0.9652" x2="2.2352" y2="0.9652" layer="30"/>
 <wire x1="-0.762" y1="1.397" x2="-1.778" y2="1.397" width="0.2032" layer="21"/>
 <wire x1="1.778" y1="1.397" x2="0.762" y2="1.397" width="0.2032" layer="21"/>
 <wire x1="1.27" y1="1.905" x2="1.27" y2="0.889" width="0.2032" layer="21"/>
+</package>
+<package name="CAP-PTH-SMALL-KIT">
+<description>&lt;h3&gt;CAP-PTH-SMALL-KIT&lt;/h3&gt;
+Commonly used for small ceramic capacitors. Like our 0.1uF (http://www.sparkfun.com/products/8375) or 22pF caps (http://www.sparkfun.com/products/8571).&lt;br&gt;
+&lt;br&gt;
+&lt;b&gt;Warning:&lt;/b&gt; This is the KIT version of this package. This package has a smaller diameter top stop mask, which doesn't cover the diameter of the pad. This means only the bottom side of the pads' copper will be exposed. You'll only be able to solder to the bottom side.</description>
+<wire x1="0" y1="0.635" x2="0" y2="-0.635" width="0.254" layer="21"/>
+<wire x1="-2.667" y1="1.27" x2="2.667" y2="1.27" width="0.254" layer="21"/>
+<wire x1="2.667" y1="1.27" x2="2.667" y2="-1.27" width="0.254" layer="21"/>
+<wire x1="2.667" y1="-1.27" x2="-2.667" y2="-1.27" width="0.254" layer="21"/>
+<wire x1="-2.667" y1="-1.27" x2="-2.667" y2="1.27" width="0.254" layer="21"/>
+<pad name="1" x="-1.397" y="0" drill="1.016" diameter="2.032" stop="no"/>
+<pad name="2" x="1.397" y="0" drill="1.016" diameter="2.032" stop="no"/>
+<polygon width="0.127" layer="30">
+<vertex x="-1.4021" y="-0.9475" curve="-90"/>
+<vertex x="-2.357" y="-0.0178" curve="-90.011749"/>
+<vertex x="-1.4046" y="0.9576" curve="-90"/>
+<vertex x="-0.4546" y="-0.0204" curve="-90.024193"/>
+</polygon>
+<polygon width="0.127" layer="29">
+<vertex x="-1.4046" y="-0.4395" curve="-90.012891"/>
+<vertex x="-1.8491" y="-0.0153" curve="-90"/>
+<vertex x="-1.4046" y="0.452" curve="-90"/>
+<vertex x="-0.9627" y="-0.0051" curve="-90.012967"/>
+</polygon>
+<polygon width="0.127" layer="30">
+<vertex x="1.397" y="-0.9475" curve="-90"/>
+<vertex x="0.4421" y="-0.0178" curve="-90.011749"/>
+<vertex x="1.3945" y="0.9576" curve="-90"/>
+<vertex x="2.3445" y="-0.0204" curve="-90.024193"/>
+</polygon>
+<polygon width="0.127" layer="29">
+<vertex x="1.3945" y="-0.4395" curve="-90.012891"/>
+<vertex x="0.95" y="-0.0153" curve="-90"/>
+<vertex x="1.3945" y="0.452" curve="-90"/>
+<vertex x="1.8364" y="-0.0051" curve="-90.012967"/>
+</polygon>
 </package>
 </packages>
 <symbols>
@@ -11106,6 +11141,16 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <rectangle x1="-1.872" y1="0.287" x2="-1.745" y2="1.176" layer="94"/>
 <pin name="+" x="0" y="2.54" visible="off" length="short" direction="pas" swaplevel="1" rot="R270"/>
 <pin name="-" x="0" y="-5.08" visible="off" length="short" direction="pas" swaplevel="1" rot="R90"/>
+</symbol>
+<symbol name="CAP">
+<wire x1="0" y1="2.54" x2="0" y2="2.032" width="0.1524" layer="94"/>
+<wire x1="0" y1="0" x2="0" y2="0.508" width="0.1524" layer="94"/>
+<text x="1.524" y="2.921" size="1.778" layer="95">&gt;NAME</text>
+<text x="1.524" y="-2.159" size="1.778" layer="96">&gt;VALUE</text>
+<rectangle x1="-2.032" y1="0.508" x2="2.032" y2="1.016" layer="94"/>
+<rectangle x1="-2.032" y1="1.524" x2="2.032" y2="2.032" layer="94"/>
+<pin name="1" x="0" y="5.08" visible="off" length="short" direction="pas" swaplevel="1" rot="R270"/>
+<pin name="2" x="0" y="-2.54" visible="off" length="short" direction="pas" swaplevel="1" rot="R90"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -11134,6 +11179,25 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <technologies>
 <technology name="">
 <attribute name="PROD_ID" value="CAP-08440" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="0.1UF-50V-20%(PTH)" prefix="C" uservalue="yes">
+<description>CAP-08370</description>
+<gates>
+<gate name="G$1" symbol="CAP" x="0" y="-2.54"/>
+</gates>
+<devices>
+<device name="KIT-EZ" package="CAP-PTH-SMALL-KIT">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="PROD_ID" value="CAP-08370" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -11227,14 +11291,14 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <variantdefs>
 </variantdefs>
 <classes>
-<class number="0" name="default" width="0.6096" drill="10">
+<class number="0" name="default" width="0" drill="0">
 </class>
 </classes>
 <parts>
 <part name="U1" library="microchip-pic18fxx5x" deviceset="PIC18*2550" device="-I/SP" technology="F"/>
 <part name="X1" library="IQD-Frequency-Products" deviceset="CRYSTALS-NOGND" device="-HC49" value="20MHZ"/>
-<part name="C1" library="rcl" deviceset="C-EU" device="025-025X050" value="22pf"/>
-<part name="C2" library="rcl" deviceset="C-EU" device="025-025X050" value="22pf"/>
+<part name="C1" library="SparkFun-Capacitors" deviceset="0.1UF-50V-20%(PTH)" device="KIT-EZ" value="22pf"/>
+<part name="C2" library="SparkFun-Capacitors" deviceset="0.1UF-50V-20%(PTH)" device="KIT-EZ" value="22pf"/>
 <part name="GND1" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="GND2" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="SUPPLY1" library="SparkFun-Aesthetics" deviceset="VCC" device=""/>
@@ -11252,7 +11316,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="GND5" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="C3" library="rcl" deviceset="C-EU" device="050-050X075" value="220nf"/>
 <part name="GND6" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
-<part name="USB" library="SparkFun-Connectors" deviceset="USB" device="PTH-VERTICAL" value="POWER"/>
+<part name="USB" library="SparkFun-Connectors" deviceset="USB" device="PTH" value="USB-B"/>
 <part name="JP1" library="jumper" deviceset="JP2E" device="" value="POWER"/>
 <part name="SUPPLY5" library="SparkFun-Aesthetics" deviceset="VCC" device=""/>
 <part name="GND7" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
@@ -11265,6 +11329,8 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="JP5" library="SparkFun-Connectors" deviceset="M03" device="1X03_NO_SILK"/>
 <part name="JP6" library="SparkFun-Connectors" deviceset="M04" device="NO_SILK_ALL_ROUND"/>
 <part name="IC1" library="v-reg" deviceset="78XXL" device=""/>
+<part name="C6" library="rcl" deviceset="C-EU" device="050-050X075" value="100nf"/>
+<part name="GND9" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -11273,8 +11339,8 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <instances>
 <instance part="U1" gate="G$1" x="20.32" y="45.72"/>
 <instance part="X1" gate="G$1" x="53.34" y="55.88" rot="R90"/>
-<instance part="C1" gate="G$1" x="63.5" y="45.72"/>
-<instance part="C2" gate="G$1" x="73.66" y="45.72"/>
+<instance part="C1" gate="G$1" x="63.5" y="43.18"/>
+<instance part="C2" gate="G$1" x="73.66" y="43.18"/>
 <instance part="GND1" gate="1" x="63.5" y="35.56"/>
 <instance part="GND2" gate="1" x="73.66" y="35.56"/>
 <instance part="SUPPLY1" gate="G$1" x="-27.94" y="53.34"/>
@@ -11305,6 +11371,8 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <instance part="JP5" gate="G$1" x="149.86" y="33.02" rot="R180"/>
 <instance part="JP6" gate="G$1" x="177.8" y="33.02" rot="R180"/>
 <instance part="IC1" gate="A" x="127" y="2.54"/>
+<instance part="C6" gate="G$1" x="-40.64" y="35.56"/>
+<instance part="GND9" gate="1" x="-40.64" y="22.86"/>
 </instances>
 <busses>
 </busses>
@@ -11403,6 +11471,11 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="111.76" y1="-15.24" x2="127" y2="-15.24" width="0.1524" layer="91"/>
 <junction x="111.76" y="-15.24"/>
 </segment>
+<segment>
+<pinref part="C6" gate="G$1" pin="2"/>
+<pinref part="GND9" gate="1" pin="GND"/>
+<wire x1="-40.64" y1="30.48" x2="-40.64" y2="25.4" width="0.1524" layer="91"/>
+</segment>
 </net>
 <net name="VCC" class="0">
 <segment>
@@ -11410,6 +11483,10 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <pinref part="SUPPLY1" gate="G$1" pin="VCC"/>
 <wire x1="-17.78" y1="43.18" x2="-27.94" y2="43.18" width="0.1524" layer="91"/>
 <wire x1="-27.94" y1="43.18" x2="-27.94" y2="53.34" width="0.1524" layer="91"/>
+<wire x1="-27.94" y1="43.18" x2="-40.64" y2="43.18" width="0.1524" layer="91"/>
+<wire x1="-40.64" y1="43.18" x2="-40.64" y2="38.1" width="0.1524" layer="91"/>
+<junction x="-27.94" y="43.18"/>
+<pinref part="C6" gate="G$1" pin="1"/>
 </segment>
 <segment>
 <pinref part="R1" gate="G$1" pin="2"/>
@@ -11759,23 +11836,16 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <approved hash="104,1,-17.78,38.1,U1,VSS,GND,,,"/>
 <approved hash="104,1,-17.78,35.56,U1,VSS,GND,,,"/>
 <approved hash="104,1,-17.78,43.18,U1,VDD,VCC,,,"/>
+<approved hash="111,1,173.99,33.02,GND,,,,,"/>
 <approved hash="113,1,91.7617,57.15,RUN,,,,,"/>
 <approved hash="113,1,109.542,57.15,POWER,,,,,"/>
 <approved hash="113,1,68.58,7.23053,RESET,,,,,"/>
-<approved hash="115,1,35.56,50.8,PIN21,,,,,"/>
-<approved hash="115,1,35.56,48.26,PIN22,,,,,"/>
-<approved hash="115,1,35.56,45.72,PIN23,,,,,"/>
-<approved hash="115,1,35.56,43.18,PIN24,,,,,"/>
-<approved hash="115,1,35.56,40.64,PIN25,,,,,"/>
-<approved hash="115,1,35.56,73.66,PIN2,,,,,"/>
-<approved hash="115,1,35.56,38.1,PIN26,,,,,"/>
-<approved hash="115,1,35.56,71.12,PIN3,,,,,"/>
-<approved hash="115,1,35.56,35.56,PIN27,,,,,"/>
-<approved hash="115,1,35.56,68.58,PIN4,,,,,"/>
-<approved hash="115,1,35.56,33.02,PIN28,,,,,"/>
-<approved hash="115,1,35.56,63.5,PIN6,,,,,"/>
+<approved hash="113,1,145.457,65.8453,JP3,,,,,"/>
+<approved hash="113,1,175.937,63.3053,JP4,,,,,"/>
+<approved hash="113,1,145.457,31.5553,JP5,,,,,"/>
+<approved hash="113,1,175.937,30.2853,JP6,,,,,"/>
+<approved hash="113,1,127,-2.0574,IC1,,,,,"/>
 <approved hash="115,1,172.72,7.62,D+,,,,,"/>
-<approved hash="115,1,35.56,60.96,PIN7,,,,,"/>
 <approved hash="115,1,172.72,5.08,D-,,,,,"/>
 </errors>
 </schematic>
